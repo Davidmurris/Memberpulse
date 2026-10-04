@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand green stays the single accent color — used for CTAs and "active" status */
+  --color-pulse-green: #1f6b42;
+  --color-pulse-green-dark: #154a2d;
+  --color-pulse-amber: #e7a325;
+  --color-pulse-red: #c0392b;
+  --color-pulse-ink: #15181c;
+  --color-pulse-charcoal: #0e1013;
+  --color-pulse-bg: #f4f4f1;
+
+  /* Fast system stack for all body text — stays lightweight on slow connections */
+  --font-display: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* Condensed scoreboard-style face, used only for headings and stat numerals */
+  --font-score: "Barlow Condensed", -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font-display);
+  color: var(--color-pulse-ink);
+  background: var(--color-pulse-bg);
+  -webkit-font-smoothing: antialiased;
+}
+:focus-visible { outline: 2px solid var(--color-pulse-green); outline-offset: 2px; }
